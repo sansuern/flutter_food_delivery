@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/food/popular_food_detail.dart';
+import 'package:flutter_application_1/screen/food/recommended_food_detail.dart';
 import 'package:flutter_application_1/screen/home/main_food_page.dart';
 import 'package:get/get.dart';
 
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
-      home: const PopularFoodDetail(),
+      home: const RecommendedFoodDetail(),
     );
   }
 }
