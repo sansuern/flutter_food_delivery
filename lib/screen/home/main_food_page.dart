@@ -31,7 +31,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       BigText(
                         text: "Bangladesh",
                         color: AppColors.mainColor,
-                        size: 20,
+                        size: Dimentions.getHeight(20),
                       ),
                       Row(
                         children: [
@@ -46,8 +46,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
+                      width: Dimentions.getWidth(45),
+                      height: Dimentions.getHeight(45),
                       child: Icon(
                         Icons.search,
                         color: Colors.white,
@@ -61,7 +61,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ]),
           ),
           //* showing the body
-          const FoodPageBody(),
+          const Expanded(
+              child: SingleChildScrollView(
+            child: FoodPageBody(),
+          )),
         ],
       ),
     );
