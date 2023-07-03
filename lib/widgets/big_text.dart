@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/dimensions.dart';
 
 // ignore: must_be_immutable
 class BigText extends StatelessWidget {
@@ -11,7 +12,7 @@ class BigText extends StatelessWidget {
       {super.key,
       this.color = const Color(0xFF332d2b),
       required this.text,
-      this.size = 20,
+      this.size = 0,
       this.overFlow = TextOverflow.ellipsis});
 
   @override
@@ -24,7 +25,7 @@ class BigText extends StatelessWidget {
           color: color,
           fontWeight: FontWeight.w400,
           fontFamily: 'Roboto',
-          fontSize: size),
+          fontSize: size == 0 ? Dimentions.getHeight(20) : size),
     );
   }
 }
