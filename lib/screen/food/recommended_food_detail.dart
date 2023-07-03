@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/colors.dart';
 import 'package:flutter_application_1/utils/dimensions.dart';
 import 'package:flutter_application_1/widgets/app_icon.dart';
 import 'package:flutter_application_1/widgets/big_text.dart';
@@ -65,6 +66,28 @@ class RecommendedFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+        ],
+      ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              AppIcon(
+                icon: Icons.remove,
+                iconColor: Colors.white,
+                backgroundColor: AppColors.mainColor,
+                iconSize: Dimentions.getHeight(24),
+              ),
+              AppIcon(
+                icon: Icons.add,
+                iconColor: Colors.white,
+                backgroundColor: AppColors.mainColor,
+                iconSize: Dimentions.getHeight(24),
+              ),
+            ],
+          )
         ],
       ),
     );
